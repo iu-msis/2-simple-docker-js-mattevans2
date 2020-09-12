@@ -1,0 +1,29 @@
+
+
+title{
+  font-color: green
+}
+header{
+  background-color: coral
+}
+
+body{
+  background-color: lightgrey
+}
+
+.profileimage {
+  border-radius: 8px;
+  width:10%;
+}
+
+.logoimage {
+  border: 5px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+#specialheader{
+  border: 5px solid red
+
+}
