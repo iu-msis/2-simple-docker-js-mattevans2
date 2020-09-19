@@ -30,17 +30,19 @@
 
   </head>
   <body class="info">
-  <p>User Profiles</p>
 
-<a href="img/download.jpg"> <img class= "profileimage" src="img/download.jpg"></a>
+  <p>User Profiles</p>
+<div id="userprofile">
+
+<a v-bind:href="userImgLarge"> <img class= "profileimage" v-bind:src="userImgThumb"></a>
 <br>
-      Name: Harper Ellis <br>
-      Country of Origin: Romania <br>
-      Birthdate: April 1, 1984 <br>
-      Age: 36 <br>
-      Email: <a href="mailto:harper.ellis@example.com"> harper.ellis@example.com </a> <br>
+      Name: {{userName}} <br>
+      Country of Origin: {{userCountry}} <br>
+      Birthdate: {{userDOB}} <br>
+      Age: {{userAge}} <br>
+      Email: <a v-bind:href="'mailto:' + userEmail"> {{userEmail}} </a> <br>
       <br>
-      Photo Source: https://www.pinterest.com/pin/553520610422360221/
+      Photo Source: {{userImgLarge}}
       <br>
 <a href="img/download-1.jpg"> <img class= "profileimage" src="img/download-1.jpg"></a>
 <br>
@@ -63,5 +65,8 @@
       <br>
       Photo Source:https://kelley.iu.edu/faculty-research/departments/operations-decision-technologies/faculty/information-systems/index.cshtml
       <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.app.js"></script>
   </body>
   </html>
