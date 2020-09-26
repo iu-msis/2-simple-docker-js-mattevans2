@@ -53,10 +53,10 @@
       <b>Email:</b> <a href="mailto:brad.smith@example.com"> brad.smith@example.com </a> <br>
       <br>
       Photo Source:https://kelley.iu.edu/programs/ms-information-systems/admissions/contact-us/index.cshtml
-      <br>
+<br>
 
 <a href="img/download-2.jpg"> <img class= "profileimage" src="img/download-2.jpg"></a>
-<br>
+    <br>
      <b>Joe Smith</b> <br>
       <b>Country of Origin:</b> UAE <br>
       <b>Birthdate:</b> February 15, 1945 <br>
@@ -65,8 +65,14 @@
       <br>
       Photo Source:https://kelley.iu.edu/faculty-research/departments/operations-decision-technologies/faculty/information-systems/index.cshtml
       <br>
+<br>
+<form v-on:submit.prevent="fetchuser">
+      <button type="submit">Submit</button>
+    </form>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/index.app.js"></script>
+
   </body>
   </html>
