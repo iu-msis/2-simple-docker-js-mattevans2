@@ -32,6 +32,29 @@
     </div>
   </nav>
 
+  <div class="container-fluid">
+      <div class="row" id="randomUserId">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+          <div class="users" v-for="user in users">
+            <span class="lastname">User Id: {{ user.userId }}</span>,<br/>
+            <span class="lastname">Name: {{user.firstName }}</span>,<br/>
+            <span class="firstName">{{ user.lastName }}</span>,<br/>
+
+
+            <form v-on: submit.prevent="createUser()">
+              <div class="users">
+                <label for="userFirstName">First Name </label>
+                <input type="text" v-model="newUser.firstname" class="form-control" id="userFirstName" placeholder="Matt">
+                <label for="userLastName">Last Name</label>
+                <input types="text" v-model="newUser.lastname" class"form-control" id="userLastName" placeholder="Evans">
+              </div><br/>
+              <input type="submit" value"Create User" class"button">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </head>
 
 <body
@@ -41,6 +64,9 @@
 
 <br>
 Source: https://news-banner.com/iu-logo-bb/
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/index.app.js"></script>
+
 
 </body>
 </html>

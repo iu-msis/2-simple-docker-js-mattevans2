@@ -1,0 +1,78 @@
+<!doctype html>
+<html
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="sortable/css/sortable-theme-bootstrap.css">
+    <link rel="stylesheet" href="sortable/css/sortable-theme-dark.css">
+
+    <title>Books!</title>
+
+    <h1 id="specialheader">
+      Please share any books in the form to add to the list. </h1>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Books</a>
+          </li>
+      </div>
+    </nav>
+
+
+  </head>
+
+  <body class="books">
+  <div id = "vueApp">
+
+    <table class="table" data-sortable id="commentTable">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">comment</th>
+        </tr>
+      </thead>
+      <tbody id="commentTableBody">
+        <tr v-for="comment in commentList" v-if="commentList.length">
+          <td>{{comment.id}}</td>
+          <td>{{comment.commentText}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form v-on:submit.prevent="createComment" id="newCommentForm">
+
+      <div class="form-group">
+        <label for="commentText">Comment</label>
+        <input type="text" class="form-control" id="commentText" aria-describedby="CommentHelp" placeholder="Enter Comment" v-model="newComment.commentText"> <br>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary" id="submitNewComment">Submit</button>
+    </form>
+  </div>
+    <script src="sortable/js/sortable.js">
+  </script>
+    <script src="sortable/js/sortable.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/comments.app.js"></script>
+  </body>
+</html>
